@@ -1,8 +1,5 @@
-const path = require('path');
 const mongoose = require('mongoose');
-
-// Load the backend's own environment file regardless of the current directory.
-require('dotenv').config({ path: path.join(__dirname, '.env') });
+require('dotenv').config();
 
 mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log('✅ MongoDB connected'))
