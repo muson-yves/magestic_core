@@ -6,7 +6,7 @@ const multer    = require('multer');
 const path      = require('path');
 const fs        = require('fs');
 const mongoose  = require('./db');
-require('dotenv').config({ path: path.join(__dirname, '.env') });
+require('dotenv').config();
 
 let stripe = null;
 if (process.env.STRIPE_SECRET_KEY && !process.env.STRIPE_SECRET_KEY.includes('REPLACE')) {
